@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+int main(){
+    float suhu;
+    string awal,akhir,jawab;
+ 
+    while (jawab != "tidak"){
+        cout<<"Masukkan satuan suhu yang ingin dikonversi (Celcius, Kelvin, Fahrenheit, Reamur): ";
+        cin>>awal;
+        cout<<"Masukkan satuan suhu hasil konversi (Celcius, Kelvin, Fahrenheit, Reamur): ";
+        cin>>akhir;
+        cout<<"Masukkan suhu: ";
+        cin>>suhu;
+        if(awal=="Celcius" && akhir=="Celcius"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Celcius."<<endl;
+            cout<<"Suhu hasil konversi = "<<suhu<<" derajat Celcius."<<endl;}
+        else if(awal=="Celcius" && akhir=="Kelvin"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Celcius."<<endl;
+            cout<<"Suhu hasil konversi = "<<suhu+273<<" Kelvin"<<endl;}
+        else if(awal=="Celcius" && akhir=="Fahrenheit"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Celcius."<<endl;
+            cout<<"Suhu hasil konversi = "<<(((1.8)*suhu)+32)<<" derajat Fahrenheit."<<endl;}
+        else if(awal=="Celcius" && akhir=="Reamur"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Celcius."<<endl;
+            cout<<"Suhu hasil konversi = "<<((0.8)*suhu)<<" derajat Reamur."<<endl;}
+        else if(awal=="Kelvin" && akhir=="Celcius"){
+            cout<<"Suhu awal = "<<suhu<<" Kelvin."<<endl;
+            cout<<"Suhu hasil konversi = "<<(suhu-273)<<" derajat Celcius."<<endl;}
+        else if(awal=="Kelvin" && akhir=="Kelvin"){
+            cout<<"Suhu awal = "<<suhu<<" Kelvin."<<endl;
+            cout<<"Suhu hasil konversi = "<<suhu<<" Kelvin."<<endl;}
+        else if(awal=="Kelvin" && akhir=="Fahrenheit"){
+            cout<<"Suhu awal = "<<suhu<<" Kelvin."<<endl;
+            cout<<"Suhu hasil konversi = "<<((1.8)*(suhu-273))+32<<" derajat Fahrenheit"<<endl;}
+        else if(awal=="Kelvin" && akhir=="Reamur"){
+            cout<<"Suhu awal = "<<suhu<<" Kelvin."<<endl;
+            cout<<"Suhu hasil konversi = "<<(0.8)*(suhu-273)<<" derajat Reamur."<<endl;}
+        else if(awal=="Fahrenheit" && akhir=="Celcius"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Fahrenheit."<<endl;
+            cout<<"Suhu hasil konversi = "<<5*((suhu-32)/9)<<" derajat Celcius."<<endl;}
+        else if(awal=="Fahrenheit" && akhir=="Kelvin"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Fahrenheit."<<endl;
+            cout<<"Suhu hasil konversi = "<<(5*((suhu-32)/9))+273<<" Kelvin."<<endl;}
+        else if(awal=="Fahrenheit" && akhir=="Fahrenheit"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Fahrenheit."<<endl;
+            cout<<"Suhu hasil konversi = "<<suhu<<" derajat Fahrenheit."<<endl;}
+        else if(awal=="Fahrenheit" && akhir=="Reamur"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Fahrenheit."<<endl;
+            cout<<"Suhu hasil konversi = "<<((suhu-32)/9)*4<<" derajat Reamur."<<endl;}
+        else if(awal=="Reamur" && akhir=="Celcius"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Reamur."<<endl;
+            cout<<"Suhu hasil konversi = "<< 1.25*(suhu)<<" derajat Celcius."<<endl;}
+        else if(awal=="Reamur" && akhir=="Kelvin"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Reamur."<<endl;
+            cout<<"Suhu hasil konversi = "<<( 1.25*(suhu))+273<<" Kelvin."<<endl;}
+        else if(awal=="Reamur" && akhir=="Fahrenheit"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Reamur."<<endl;
+            cout<<"Suhu hasil konversi = "<<(2.25*(suhu))+32<<" derajat Fahrenheit."<<endl;}
+        else if(awal=="Reamur" && akhir=="Reamur"){
+            cout<<"Suhu awal = "<<suhu<<" derajat Reamur."<<endl;
+            cout<<"Suhu hasil konversi = "<<suhu<<" derajat Celcius."<<endl;}
+    cout<<"Apakah anda ingin mengkonversi suhu lagi (ya/tidak)? ";
+    cin>>jawab;
+}}
